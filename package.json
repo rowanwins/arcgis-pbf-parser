@@ -1,0 +1,34 @@
+{
+  "name": "arcgis-pbf-parser",
+  "version": "0.0.1",
+  "description": "A library for parsing the arcgis pbf format into geojson",
+  "main": "dist/arcgis-pbf.js",
+  "module": "dist/arcgis-pbf.esm.js",
+  "browser": "dist/arcgis-pbf.min.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rowanwins/arcgis-pbf-parser"
+  },
+  "homepage": "https://github.com/rowanwins/arcgis-pbf-parser",
+  "author": "Rowan Winsemius",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "pbf": "^3.2.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^19.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "eslint": "^7.26.0",
+    "eslint-config-mourner": "^3.0.0",
+    "esm": "^3.2.25",
+    "rollup": "^2.48.0",
+    "rollup-plugin-terser": "^7.0.2"
+  }
+}
