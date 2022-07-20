@@ -51,15 +51,15 @@ export default function decode(featureCollectionBuffer) {
 // * @property {number} esriGeometryTypeMultipatch=4 esriGeometryTypeMultipatch value
 // * @property {number} esriGeometryTypeNone=127 esriGeometryTypeNone value
 function getGeometryParser (featureType) {
-  switch(featureType) {
-    case 3:
-      return createPolygon
-    case 2:
-      return createLine
-    case 0:
-      return createPoint
-    default:
-      return createPolygon
+  switch (featureType) {
+  case 3:
+    return createPolygon
+  case 2:
+    return createLine
+  case 0:
+    return createPoint
+  default:
+    return createPolygon
   }
 }
 
@@ -96,30 +96,29 @@ function createPolygon (f, transform) {
     for (let index = 0; index < lengths; index++) {
       const stopPoint = startPoint + (f.geometry.lengths[index] * 2)
       const ring = createLinearRing(f.geometry.coords, transform, startPoint, stopPoint)
-      
+
       // Check if the ring is clockwise, if so it's an outer ring
       // If it's counter-clockwise its a hole and so push it to the prev outer ring
       // This is perhaps a bit naive
       // see https://github.com/terraformer-js/terraformer/blob/master/packages/arcgis/src/geojson.js
-      // for a fuller example of doing this 
+      // for a fuller example of doing this
       if (ringIsClockwise(ring)) {
         p.coordinates.push([ring])
       } else if (p.coordinates.length > 0) {
-         p.coordinates[p.coordinates.length - 1].push(ring)
+        p.coordinates[p.coordinates.length - 1].push(ring)
       }
       startPoint = stopPoint
     }
   }
-  
   return p
 }
 
 function ringIsClockwise (ringToTest) {
-  var total = 0
-  var i = 0
-  var rLength = ringToTest.length
-  var pt1 = ringToTest[i]
-  var pt2
+  let total = 0
+  let i = 0
+  const rLength = ringToTest.length
+  let pt1 = ringToTest[i]
+  let pt2
   for (i; i < rLength - 1; i++) {
     pt2 = ringToTest[i + 1]
     total += (pt2[0] - pt1[0]) * (pt2[1] + pt1[1])
@@ -153,7 +152,7 @@ function collectAttributes(fields, featureAttributes) {
   const out = {}
   for (let i = 0; i < fields.length; i++) {
     const f = fields[i]
-    if (featureAttributes[i][featureAttributes[i].value_type]) out[f.name] = featureAttributes[i][featureAttributes[i].value_type]
+    if (featureAttributes[i][featureAttributes[i].value_type] !== undefined) out[f.name] = featureAttributes[i][featureAttributes[i].value_type]
     else out[f.name] = null
   }
   return out

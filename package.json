@@ -1,6 +1,6 @@
 {
   "name": "arcgis-pbf-parser",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A library for parsing the arcgis pbf format into geojson",
   "main": "dist/arcgis-pbf.js",
   "module": "dist/arcgis-pbf.esm.js",
