@@ -9,22 +9,19 @@ const output = (input, file, format, plugins) => ({
     file,
     format
   },
-  external: ['pbf'],
   plugins
 })
 
 export default [
-  output('./src/main.js', './dist/arcgis-pbf.js', 'umd', [
-    commonjs(),
-    resolve()
+  output('./src/main.js', './dist/arcgis-pbf.cjs', 'cjs', [
+    commonjs()
   ]),
   output('./src/main.js', './dist/arcgis-pbf.min.js', 'umd', [
     commonjs(),
     resolve(),
     terser()
   ]),
-  output('./src/main.js', './dist/arcgis-pbf.esm.js', 'esm', [
-    commonjs(),
-    resolve()
+  output('./src/main.js', './dist/arcgis-pbf.mjs', 'esm', [
+    commonjs()
   ])
 ]

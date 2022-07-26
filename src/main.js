@@ -1,4 +1,4 @@
-import {FeatureCollectionPBuffer as EsriPbfBuffer} from './parser/PbfFeatureCollection'
+import {FeatureCollectionPBuffer as EsriPbfBuffer} from './parser/PbfFeatureCollection.js'
 import Pbf from 'pbf'
 
 export default function decode(featureCollectionBuffer) {
@@ -72,11 +72,28 @@ function createPoint (f, transform) {
 }
 
 function createLine (f, transform) {
-  const p = {
-    type: 'LineString',
-    coordinates: createLinearRing(f.geometry.coords, transform, 0, f.geometry.lengths[0] * 2)
+  let l = null
+  const lengths = f.geometry.lengths.length
+
+  if (lengths === 1) {
+    l = {
+      type: 'LineString',
+      coordinates: createLinearRing(f.geometry.coords, transform, 0, f.geometry.lengths[0] * 2)
+    }
+  } else if (lengths > 1) {
+    l = {
+      type: 'MultiLineString',
+      coordinates: []
+    }
+    let startPoint = 0
+    for (let index = 0; index < lengths; index++) {
+      const stopPoint = startPoint + (f.geometry.lengths[index] * 2)
+      const line = createLinearRing(f.geometry.coords, transform, startPoint, stopPoint)
+      l.coordinates.push(line)
+      startPoint = stopPoint
+    }
   }
-  return p
+  return l
 }
 
 function createPolygon (f, transform) {

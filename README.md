@@ -38,12 +38,12 @@ This was cobbled together fairly quickly based on the [minimal documentation](ht
   - Inc MultiPolygon
   - Inc Polygon with holes
 - LineString
+  - Inc MultiLineString
 - Point
 - Attributes
 
 ### To Do
 - MultiPoint (a sample service would be helpful)
-- MultiLineString (a sample service would be helpful)
 - Write proper tests
 
 
