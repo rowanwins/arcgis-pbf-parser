@@ -26,8 +26,6 @@ The decode method returns an object containing the featureCollection, and a bool
 }
 ````
 
-*Note*
-I've not bundled the `pbf` dependency in my package, so you may need to `npm install pbf --save` in your project, although many of the common mapping libraries already include it so 🤞 you shouldn't need to.
 
 ## Status
 This was cobbled together fairly quickly based on the [minimal documentation](https://github.com/Esri/arcgis-pbf/tree/main/proto/FeatureCollection) available.
