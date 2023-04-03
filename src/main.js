@@ -34,7 +34,7 @@ export default function decode(featureCollectionBuffer) {
       type: 'Feature',
       id: getFeatureId(fields, f.attributes, objectIdField),
       properties: collectAttributes(fields, f.attributes),
-      geometry: geometryParser(f, transform)
+      geometry: f.geometry && geometryParser(f, transform)
     })
   }
 
