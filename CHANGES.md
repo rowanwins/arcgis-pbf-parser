@@ -1,3 +1,6 @@
+# v0.0.4
+- Add handling for null geometries
+
 # v0.0.3
 - Add support for MultiLinestring
 - Rejigging bundling

@@ -3,6 +3,9 @@ A library for converting an [arcgis-pbf](https://github.com/Esri/arcgis-pbf) int
 
 By itself it doesn't do much but you can find a more complex example of it's usage is in my mapbox-gl-arcgis-featureserver library.
 
+[![Build Status](https://github.com/rowanwins/arcgis-pbf-parser/workflows/Node/badge.svg?branch=master)](https://github.com/rowanwins/arcgis-pbf-parser/actions)
+[![minzipped size](https://badgen.net/bundlephobia/minzip/arcgis-pbf-parser)](https://esm.run/arcgis-pbf-parser)
+
 ## Basic Usage
 ````
 const arcgisPbfDecode = require('arcgis-pbf-parser')
@@ -31,6 +34,7 @@ The decode method returns an object containing the featureCollection, and a bool
 This was cobbled together fairly quickly based on the [minimal documentation](https://github.com/Esri/arcgis-pbf/tree/main/proto/FeatureCollection) available.
 
 
+
 ### Done
 - Polgon
   - Inc MultiPolygon
@@ -39,10 +43,11 @@ This was cobbled together fairly quickly based on the [minimal documentation](ht
   - Inc MultiLineString
 - Point
 - Attributes
+- Features with null geometries
 
 ### To Do
 - MultiPoint (a sample service would be helpful)
-- Write proper tests
+- Improve tests
 
 
 ## Acknowledgements

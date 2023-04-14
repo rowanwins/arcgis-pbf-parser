@@ -1,0 +1,158 @@
+{
+	"featureCollection": {
+		"type": "FeatureCollection",
+		"features": [
+			{
+				"type": "Feature",
+				"id": 1390,
+				"properties": {
+					"LOCATION": "Ohio River at Constance",
+					"OBJECTID": 1390
+				},
+				"geometry": {
+					"type": "Point",
+					"coordinates": [
+						-9420644.991799999,
+						4731755.4184000045
+					]
+				}
+			},
+			{
+				"type": "Feature",
+				"id": 1391,
+				"properties": {
+					"LOCATION": "Ohio River at Rabbit Hash",
+					"OBJECTID": 1391
+				},
+				"geometry": {
+					"type": "Point",
+					"coordinates": [
+						-9442513.0583,
+						4715912.576800004
+					]
+				}
+			},
+			{
+				"type": "Feature",
+				"id": 1392,
+				"properties": {
+					"LOCATION": "Ohio River at Augusta",
+					"OBJECTID": 1392
+				},
+				"geometry": {
+					"type": "Point",
+					"coordinates": [
+						-9351674.589599999,
+						4688818.1963
+					]
+				}
+			},
+			{
+				"type": "Feature",
+				"id": 1393,
+				"properties": {
+					"LOCATION": "Green River at KY 269",
+					"OBJECTID": 1393
+				},
+				"geometry": {
+					"type": "Point",
+					"coordinates": [
+						-9659919.2932,
+						4475367.049699999
+					]
+				}
+			},
+			{
+				"type": "Feature",
+				"id": 1394,
+				"properties": {
+					"LOCATION": "Green River at Rochester",
+					"OBJECTID": 1394
+				},
+				"geometry": {
+					"type": "Point",
+					"coordinates": [
+						-9672983.2324,
+						4469049.795000002
+					]
+				}
+			},
+			{
+				"type": "Feature",
+				"id": 1395,
+				"properties": {
+					"LOCATION": "Ohio River at Cave-in-Rock",
+					"OBJECTID": 1395
+				},
+				"geometry": {
+					"type": "Point",
+					"coordinates": [
+						-9814548.4463,
+						4503421.3257
+					]
+				}
+			},
+			{
+				"type": "Feature",
+				"id": 1396,
+				"properties": {
+					"LOCATION": "Green River at Mammoth Cave NP",
+					"OBJECTID": 1396
+				},
+				"geometry": {
+					"type": "Point",
+					"coordinates": [
+						-9586067.9473,
+						4464182.843900003
+					]
+				}
+			},
+			{
+				"type": "Feature",
+				"id": 1397,
+				"properties": {
+					"LOCATION": "Mississippi River at Hickman",
+					"OBJECTID": 1397
+				},
+				"geometry": {
+					"type": "Point",
+					"coordinates": [
+						-9931037.2854,
+						4379030.0242
+					]
+				}
+			},
+			{
+				"type": "Feature",
+				"id": 1398,
+				"properties": {
+					"LOCATION": "Kentucky River at Valley View",
+					"OBJECTID": 1398
+				},
+				"geometry": {
+					"type": "Point",
+					"coordinates": [
+						-9399245.7235,
+						4557837.657300003
+					]
+				}
+			},
+			{
+				"type": "Feature",
+				"id": 1399,
+				"properties": {
+					"LOCATION": "Cumberland River at Turkey Neck Bend",
+					"OBJECTID": 1399
+				},
+				"geometry": {
+					"type": "Point",
+					"coordinates": [
+						-9525320.131,
+						4395775.289900005
+					]
+				}
+			}
+		]
+	},
+	"exceededTransferLimit": false
+}
