@@ -1,7 +1,7 @@
 # arcgis-pbf-parser
 A library for converting an [arcgis-pbf](https://github.com/Esri/arcgis-pbf) into a geojson `FeatureCollection`.
 
-By itself it doesn't do much but you can find a more complex example of it's usage is in my mapbox-gl-arcgis-featureserver library.
+By itself it doesn't do much but you can find a more complex example of it's usage is in my [mapbox-gl-arcgis-featureserver](https://github.com/rowanwins/mapbox-gl-arcgis-featureserver) library.
 
 [![Test Status](https://github.com/rowanwins/arcgis-pbf-parser/workflows/Tests/badge.svg?branch=master)](https://github.com/rowanwins/arcgis-pbf-parser/actions)
 [![minzipped size](https://badgen.net/bundlephobia/minzip/arcgis-pbf-parser)](https://esm.run/arcgis-pbf-parser)
@@ -19,7 +19,7 @@ fetch('Some/FeatureServer/0/query?f=pbf&...')
    })
 ````
 
-The decode method returns an object containing the featureCollection, and a boolean specifying if there were too many features and so you need to paginate for more features with the same request.
+The decode method returns an object containing the `featureCollection` object, and a boolean specifying if there were too many features and so you need to paginate for more features with the same request.
 ````
 {
   featureCollection: {
