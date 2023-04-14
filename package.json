@@ -26,6 +26,9 @@
   "homepage": "https://github.com/rowanwins/arcgis-pbf-parser",
   "author": "Rowan Winsemius",
   "license": "Apache-2.0",
+  "eslintConfig": {
+    "extends": "mourner"
+  },
   "dependencies": {
     "pbf": "^3.2.1"
   },

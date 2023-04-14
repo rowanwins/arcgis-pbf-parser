@@ -3,7 +3,7 @@ A library for converting an [arcgis-pbf](https://github.com/Esri/arcgis-pbf) int
 
 By itself it doesn't do much but you can find a more complex example of it's usage is in my mapbox-gl-arcgis-featureserver library.
 
-[![Build Status](https://github.com/rowanwins/arcgis-pbf-parser/workflows/Node/badge.svg?branch=master)](https://github.com/rowanwins/arcgis-pbf-parser/actions)
+[![Test Status](https://github.com/rowanwins/arcgis-pbf-parser/workflows/Tests/badge.svg?branch=master)](https://github.com/rowanwins/arcgis-pbf-parser/actions)
 [![minzipped size](https://badgen.net/bundlephobia/minzip/arcgis-pbf-parser)](https://esm.run/arcgis-pbf-parser)
 
 ## Basic Usage
